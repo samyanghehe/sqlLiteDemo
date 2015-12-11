@@ -14,6 +14,10 @@
 		5AE11E681C1B264B0032785D /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5AE11E671C1B264B0032785D /* Images.xcassets */; };
 		5AE11E6B1C1B264B0032785D /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5AE11E691C1B264B0032785D /* LaunchScreen.xib */; };
 		5AE11E771C1B264B0032785D /* sqlLiteDemo2Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AE11E761C1B264B0032785D /* sqlLiteDemo2Tests.m */; };
+		5AE11E811C1B27AF0032785D /* libsqlite3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 5AE11E801C1B27AF0032785D /* libsqlite3.dylib */; };
+		5AE11E841C1B284E0032785D /* YSStudent.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AE11E831C1B284E0032785D /* YSStudent.m */; };
+		5AE11E871C1B289A0032785D /* YSStudentTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AE11E861C1B289A0032785D /* YSStudentTool.m */; };
+		5AE11E8A1C1B2FE10032785D /* YSTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AE11E891C1B2FE10032785D /* YSTableViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,6 +44,13 @@
 		5AE11E701C1B264B0032785D /* sqlLiteDemo2Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = sqlLiteDemo2Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		5AE11E751C1B264B0032785D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5AE11E761C1B264B0032785D /* sqlLiteDemo2Tests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = sqlLiteDemo2Tests.m; sourceTree = "<group>"; };
+		5AE11E801C1B27AF0032785D /* libsqlite3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.dylib; path = usr/lib/libsqlite3.dylib; sourceTree = SDKROOT; };
+		5AE11E821C1B284E0032785D /* YSStudent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YSStudent.h; sourceTree = "<group>"; };
+		5AE11E831C1B284E0032785D /* YSStudent.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YSStudent.m; sourceTree = "<group>"; };
+		5AE11E851C1B289A0032785D /* YSStudentTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YSStudentTool.h; sourceTree = "<group>"; };
+		5AE11E861C1B289A0032785D /* YSStudentTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YSStudentTool.m; sourceTree = "<group>"; };
+		5AE11E881C1B2FE10032785D /* YSTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YSTableViewController.h; sourceTree = "<group>"; };
+		5AE11E891C1B2FE10032785D /* YSTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YSTableViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -47,6 +58,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5AE11E811C1B27AF0032785D /* libsqlite3.dylib in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -63,6 +75,7 @@
 		5AE11E4E1C1B264B0032785D = {
 			isa = PBXGroup;
 			children = (
+				5AE11E801C1B27AF0032785D /* libsqlite3.dylib */,
 				5AE11E591C1B264B0032785D /* sqlLiteDemo2 */,
 				5AE11E731C1B264B0032785D /* sqlLiteDemo2Tests */,
 				5AE11E581C1B264B0032785D /* Products */,
@@ -85,9 +98,15 @@
 				5AE11E5F1C1B264B0032785D /* AppDelegate.m */,
 				5AE11E611C1B264B0032785D /* ViewController.h */,
 				5AE11E621C1B264B0032785D /* ViewController.m */,
+				5AE11E821C1B284E0032785D /* YSStudent.h */,
+				5AE11E831C1B284E0032785D /* YSStudent.m */,
+				5AE11E851C1B289A0032785D /* YSStudentTool.h */,
+				5AE11E861C1B289A0032785D /* YSStudentTool.m */,
+				5AE11E881C1B2FE10032785D /* YSTableViewController.h */,
+				5AE11E891C1B2FE10032785D /* YSTableViewController.m */,
 				5AE11E641C1B264B0032785D /* Main.storyboard */,
-				5AE11E671C1B264B0032785D /* Images.xcassets */,
 				5AE11E691C1B264B0032785D /* LaunchScreen.xib */,
+				5AE11E671C1B264B0032785D /* Images.xcassets */,
 				5AE11E5A1C1B264B0032785D /* Supporting Files */,
 			);
 			path = sqlLiteDemo2;
@@ -163,6 +182,7 @@
 		5AE11E4F1C1B264B0032785D /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				CLASSPREFIX = YS;
 				LastUpgradeCheck = 0610;
 				ORGANIZATIONNAME = ys;
 				TargetAttributes = {
@@ -219,7 +239,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5AE11E871C1B289A0032785D /* YSStudentTool.m in Sources */,
+				5AE11E8A1C1B2FE10032785D /* YSTableViewController.m in Sources */,
 				5AE11E631C1B264B0032785D /* ViewController.m in Sources */,
+				5AE11E841C1B284E0032785D /* YSStudent.m in Sources */,
 				5AE11E601C1B264B0032785D /* AppDelegate.m in Sources */,
 				5AE11E5D1C1B264B0032785D /* main.m in Sources */,
 			);
