@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5AE11E4D1C1B14710032785D /* libsqlite3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 5AE11E4C1C1B14710032785D /* libsqlite3.dylib */; };
 		5AE4EA121C1A33820060C58B /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AE4EA111C1A33820060C58B /* main.m */; };
 		5AE4EA151C1A33820060C58B /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AE4EA141C1A33820060C58B /* AppDelegate.m */; };
 		5AE4EA181C1A33820060C58B /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AE4EA171C1A33820060C58B /* ViewController.m */; };
@@ -27,6 +28,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		5AE11E4C1C1B14710032785D /* libsqlite3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.dylib; path = usr/lib/libsqlite3.dylib; sourceTree = SDKROOT; };
 		5AE4EA0C1C1A33820060C58B /* sqlLiteDemo1.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = sqlLiteDemo1.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5AE4EA101C1A33820060C58B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5AE4EA111C1A33820060C58B /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -47,6 +49,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5AE11E4D1C1B14710032785D /* libsqlite3.dylib in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -63,6 +66,7 @@
 		5AE4EA031C1A33820060C58B = {
 			isa = PBXGroup;
 			children = (
+				5AE11E4C1C1B14710032785D /* libsqlite3.dylib */,
 				5AE4EA0E1C1A33820060C58B /* sqlLiteDemo1 */,
 				5AE4EA281C1A33830060C58B /* sqlLiteDemo1Tests */,
 				5AE4EA0D1C1A33820060C58B /* Products */,
@@ -412,6 +416,7 @@
 				5AE4EA311C1A33830060C58B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		5AE4EA321C1A33830060C58B /* Build configuration list for PBXNativeTarget "sqlLiteDemo1Tests" */ = {
 			isa = XCConfigurationList;
@@ -420,6 +425,7 @@
 				5AE4EA341C1A33830060C58B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
