@@ -93,13 +93,16 @@
 //        NSLog(@"删除成功");
 //    }
     [self.queue inDatabase:^(FMDatabase *db) {
+        [db beginTransaction];//开启事物
         if (![db executeUpdate:@"delete from t_student where name = 'jack';"]) {
             NSLog(@"删除失败");
         }else{
             NSLog(@"删除成功");
         }
+        //other execute
+        //若多个操作中有一个以上失败,则事物内的所有已经执行的操作rollback
+        [db commit];//提交事物
     }];
-
 }
 
 - (IBAction)update {
