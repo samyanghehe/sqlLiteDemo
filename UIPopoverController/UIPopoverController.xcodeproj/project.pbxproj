@@ -1,0 +1,502 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		5AB37F611C1C673A00247E74 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5AB37F601C1C673A00247E74 /* Images.xcassets */; };
+		5AB37F641C1C673A00247E74 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5AB37F621C1C673A00247E74 /* LaunchScreen.xib */; };
+		5AB37F701C1C673A00247E74 /* UIPopoverControllerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AB37F6F1C1C673A00247E74 /* UIPopoverControllerTests.m */; };
+		5AB37F961C1C88A700247E74 /* YSMenuItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AB37F8C1C1C88A700247E74 /* YSMenuItem.m */; };
+		5AB37F971C1C88A700247E74 /* YSTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AB37F8E1C1C88A700247E74 /* YSTableViewController.m */; };
+		5AB37F981C1C88A700247E74 /* YSOneViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AB37F911C1C88A700247E74 /* YSOneViewController.m */; };
+		5AB37F991C1C88A700247E74 /* YSOneViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5AB37F921C1C88A700247E74 /* YSOneViewController.xib */; };
+		5AB37F9A1C1C88A700247E74 /* YSTwoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AB37F941C1C88A700247E74 /* YSTwoViewController.m */; };
+		5AB37F9B1C1C88A700247E74 /* YSTwoViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5AB37F951C1C88A700247E74 /* YSTwoViewController.xib */; };
+		5AB37FA21C1C88E700247E74 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AB37F9E1C1C88E700247E74 /* AppDelegate.m */; };
+		5AB37FA31C1C88E700247E74 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AB37F9F1C1C88E700247E74 /* main.m */; };
+		5AB37FA41C1C88E700247E74 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AB37FA11C1C88E700247E74 /* ViewController.m */; };
+		5AB37FA61C1C894F00247E74 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5AB37FA51C1C894F00247E74 /* Main.storyboard */; };
+		5AB37FAA1C1C8A0500247E74 /* YSColorPickerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AB37FA81C1C8A0500247E74 /* YSColorPickerViewController.m */; };
+		5AB37FAB1C1C8A0500247E74 /* YSColorPickerViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5AB37FA91C1C8A0500247E74 /* YSColorPickerViewController.xib */; };
+		5AB37FAE1C1C903B00247E74 /* UIImage+MJ.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AB37FAD1C1C903B00247E74 /* UIImage+MJ.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		5AB37F6A1C1C673A00247E74 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 5AB37F481C1C673A00247E74 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 5AB37F4F1C1C673A00247E74;
+			remoteInfo = UIPopoverController;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		5AB37F501C1C673A00247E74 /* UIPopoverController.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = UIPopoverController.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		5AB37F541C1C673A00247E74 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5AB37F601C1C673A00247E74 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		5AB37F631C1C673A00247E74 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
+		5AB37F691C1C673A00247E74 /* UIPopoverControllerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = UIPopoverControllerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		5AB37F6E1C1C673A00247E74 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5AB37F6F1C1C673A00247E74 /* UIPopoverControllerTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UIPopoverControllerTests.m; sourceTree = "<group>"; };
+		5AB37F8B1C1C88A700247E74 /* YSMenuItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YSMenuItem.h; sourceTree = "<group>"; };
+		5AB37F8C1C1C88A700247E74 /* YSMenuItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YSMenuItem.m; sourceTree = "<group>"; };
+		5AB37F8D1C1C88A700247E74 /* YSTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YSTableViewController.h; sourceTree = "<group>"; };
+		5AB37F8E1C1C88A700247E74 /* YSTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YSTableViewController.m; sourceTree = "<group>"; };
+		5AB37F901C1C88A700247E74 /* YSOneViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YSOneViewController.h; sourceTree = "<group>"; };
+		5AB37F911C1C88A700247E74 /* YSOneViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YSOneViewController.m; sourceTree = "<group>"; };
+		5AB37F921C1C88A700247E74 /* YSOneViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = YSOneViewController.xib; sourceTree = "<group>"; };
+		5AB37F931C1C88A700247E74 /* YSTwoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YSTwoViewController.h; sourceTree = "<group>"; };
+		5AB37F941C1C88A700247E74 /* YSTwoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YSTwoViewController.m; sourceTree = "<group>"; };
+		5AB37F951C1C88A700247E74 /* YSTwoViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = YSTwoViewController.xib; sourceTree = "<group>"; };
+		5AB37F9D1C1C88E700247E74 /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		5AB37F9E1C1C88E700247E74 /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		5AB37F9F1C1C88E700247E74 /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		5AB37FA01C1C88E700247E74 /* ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		5AB37FA11C1C88E700247E74 /* ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		5AB37FA51C1C894F00247E74 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		5AB37FA71C1C8A0500247E74 /* YSColorPickerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YSColorPickerViewController.h; sourceTree = "<group>"; };
+		5AB37FA81C1C8A0500247E74 /* YSColorPickerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YSColorPickerViewController.m; sourceTree = "<group>"; };
+		5AB37FA91C1C8A0500247E74 /* YSColorPickerViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = YSColorPickerViewController.xib; sourceTree = "<group>"; };
+		5AB37FAC1C1C903B00247E74 /* UIImage+MJ.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+MJ.h"; sourceTree = "<group>"; };
+		5AB37FAD1C1C903B00247E74 /* UIImage+MJ.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+MJ.m"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		5AB37F4D1C1C673A00247E74 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5AB37F661C1C673A00247E74 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		5AB37F471C1C673A00247E74 = {
+			isa = PBXGroup;
+			children = (
+				5AB37F521C1C673A00247E74 /* UIPopoverController */,
+				5AB37F6C1C1C673A00247E74 /* UIPopoverControllerTests */,
+				5AB37F511C1C673A00247E74 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		5AB37F511C1C673A00247E74 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				5AB37F501C1C673A00247E74 /* UIPopoverController.app */,
+				5AB37F691C1C673A00247E74 /* UIPopoverControllerTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		5AB37F521C1C673A00247E74 /* UIPopoverController */ = {
+			isa = PBXGroup;
+			children = (
+				5AB37F9C1C1C88E700247E74 /* main */,
+				5AB37F8A1C1C88A700247E74 /* menu */,
+				5AB37F8F1C1C88A700247E74 /* title */,
+				5AB37F891C1C889E00247E74 /* color */,
+				5AB37F601C1C673A00247E74 /* Images.xcassets */,
+				5AB37F621C1C673A00247E74 /* LaunchScreen.xib */,
+				5AB37F531C1C673A00247E74 /* Supporting Files */,
+			);
+			path = UIPopoverController;
+			sourceTree = "<group>";
+		};
+		5AB37F531C1C673A00247E74 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				5AB37F541C1C673A00247E74 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		5AB37F6C1C1C673A00247E74 /* UIPopoverControllerTests */ = {
+			isa = PBXGroup;
+			children = (
+				5AB37F6F1C1C673A00247E74 /* UIPopoverControllerTests.m */,
+				5AB37F6D1C1C673A00247E74 /* Supporting Files */,
+			);
+			path = UIPopoverControllerTests;
+			sourceTree = "<group>";
+		};
+		5AB37F6D1C1C673A00247E74 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				5AB37F6E1C1C673A00247E74 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		5AB37F891C1C889E00247E74 /* color */ = {
+			isa = PBXGroup;
+			children = (
+				5AB37FAC1C1C903B00247E74 /* UIImage+MJ.h */,
+				5AB37FAD1C1C903B00247E74 /* UIImage+MJ.m */,
+				5AB37FA71C1C8A0500247E74 /* YSColorPickerViewController.h */,
+				5AB37FA81C1C8A0500247E74 /* YSColorPickerViewController.m */,
+				5AB37FA91C1C8A0500247E74 /* YSColorPickerViewController.xib */,
+			);
+			path = color;
+			sourceTree = "<group>";
+		};
+		5AB37F8A1C1C88A700247E74 /* menu */ = {
+			isa = PBXGroup;
+			children = (
+				5AB37F8B1C1C88A700247E74 /* YSMenuItem.h */,
+				5AB37F8C1C1C88A700247E74 /* YSMenuItem.m */,
+				5AB37F8D1C1C88A700247E74 /* YSTableViewController.h */,
+				5AB37F8E1C1C88A700247E74 /* YSTableViewController.m */,
+			);
+			path = menu;
+			sourceTree = "<group>";
+		};
+		5AB37F8F1C1C88A700247E74 /* title */ = {
+			isa = PBXGroup;
+			children = (
+				5AB37F901C1C88A700247E74 /* YSOneViewController.h */,
+				5AB37F911C1C88A700247E74 /* YSOneViewController.m */,
+				5AB37F921C1C88A700247E74 /* YSOneViewController.xib */,
+				5AB37F931C1C88A700247E74 /* YSTwoViewController.h */,
+				5AB37F941C1C88A700247E74 /* YSTwoViewController.m */,
+				5AB37F951C1C88A700247E74 /* YSTwoViewController.xib */,
+			);
+			path = title;
+			sourceTree = "<group>";
+		};
+		5AB37F9C1C1C88E700247E74 /* main */ = {
+			isa = PBXGroup;
+			children = (
+				5AB37FA51C1C894F00247E74 /* Main.storyboard */,
+				5AB37F9F1C1C88E700247E74 /* main.m */,
+				5AB37F9D1C1C88E700247E74 /* AppDelegate.h */,
+				5AB37F9E1C1C88E700247E74 /* AppDelegate.m */,
+				5AB37FA01C1C88E700247E74 /* ViewController.h */,
+				5AB37FA11C1C88E700247E74 /* ViewController.m */,
+			);
+			path = main;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		5AB37F4F1C1C673A00247E74 /* UIPopoverController */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 5AB37F731C1C673A00247E74 /* Build configuration list for PBXNativeTarget "UIPopoverController" */;
+			buildPhases = (
+				5AB37F4C1C1C673A00247E74 /* Sources */,
+				5AB37F4D1C1C673A00247E74 /* Frameworks */,
+				5AB37F4E1C1C673A00247E74 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = UIPopoverController;
+			productName = UIPopoverController;
+			productReference = 5AB37F501C1C673A00247E74 /* UIPopoverController.app */;
+			productType = "com.apple.product-type.application";
+		};
+		5AB37F681C1C673A00247E74 /* UIPopoverControllerTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 5AB37F761C1C673A00247E74 /* Build configuration list for PBXNativeTarget "UIPopoverControllerTests" */;
+			buildPhases = (
+				5AB37F651C1C673A00247E74 /* Sources */,
+				5AB37F661C1C673A00247E74 /* Frameworks */,
+				5AB37F671C1C673A00247E74 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				5AB37F6B1C1C673A00247E74 /* PBXTargetDependency */,
+			);
+			name = UIPopoverControllerTests;
+			productName = UIPopoverControllerTests;
+			productReference = 5AB37F691C1C673A00247E74 /* UIPopoverControllerTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		5AB37F481C1C673A00247E74 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				CLASSPREFIX = YS;
+				LastUpgradeCheck = 0610;
+				ORGANIZATIONNAME = ys;
+				TargetAttributes = {
+					5AB37F4F1C1C673A00247E74 = {
+						CreatedOnToolsVersion = 6.1;
+					};
+					5AB37F681C1C673A00247E74 = {
+						CreatedOnToolsVersion = 6.1;
+						TestTargetID = 5AB37F4F1C1C673A00247E74;
+					};
+				};
+			};
+			buildConfigurationList = 5AB37F4B1C1C673A00247E74 /* Build configuration list for PBXProject "UIPopoverController" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 5AB37F471C1C673A00247E74;
+			productRefGroup = 5AB37F511C1C673A00247E74 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				5AB37F4F1C1C673A00247E74 /* UIPopoverController */,
+				5AB37F681C1C673A00247E74 /* UIPopoverControllerTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		5AB37F4E1C1C673A00247E74 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5AB37F991C1C88A700247E74 /* YSOneViewController.xib in Resources */,
+				5AB37FA61C1C894F00247E74 /* Main.storyboard in Resources */,
+				5AB37FAB1C1C8A0500247E74 /* YSColorPickerViewController.xib in Resources */,
+				5AB37F641C1C673A00247E74 /* LaunchScreen.xib in Resources */,
+				5AB37F611C1C673A00247E74 /* Images.xcassets in Resources */,
+				5AB37F9B1C1C88A700247E74 /* YSTwoViewController.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5AB37F671C1C673A00247E74 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		5AB37F4C1C1C673A00247E74 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5AB37FAA1C1C8A0500247E74 /* YSColorPickerViewController.m in Sources */,
+				5AB37F971C1C88A700247E74 /* YSTableViewController.m in Sources */,
+				5AB37FA41C1C88E700247E74 /* ViewController.m in Sources */,
+				5AB37FA21C1C88E700247E74 /* AppDelegate.m in Sources */,
+				5AB37FAE1C1C903B00247E74 /* UIImage+MJ.m in Sources */,
+				5AB37F9A1C1C88A700247E74 /* YSTwoViewController.m in Sources */,
+				5AB37F981C1C88A700247E74 /* YSOneViewController.m in Sources */,
+				5AB37FA31C1C88E700247E74 /* main.m in Sources */,
+				5AB37F961C1C88A700247E74 /* YSMenuItem.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5AB37F651C1C673A00247E74 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5AB37F701C1C673A00247E74 /* UIPopoverControllerTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		5AB37F6B1C1C673A00247E74 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 5AB37F4F1C1C673A00247E74 /* UIPopoverController */;
+			targetProxy = 5AB37F6A1C1C673A00247E74 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		5AB37F621C1C673A00247E74 /* LaunchScreen.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				5AB37F631C1C673A00247E74 /* Base */,
+			);
+			name = LaunchScreen.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		5AB37F711C1C673A00247E74 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = 2;
+			};
+			name = Debug;
+		};
+		5AB37F721C1C673A00247E74 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = 2;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		5AB37F741C1C673A00247E74 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = UIPopoverController/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		5AB37F751C1C673A00247E74 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = UIPopoverController/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		5AB37F771C1C673A00247E74 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = UIPopoverControllerTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/UIPopoverController.app/UIPopoverController";
+			};
+			name = Debug;
+		};
+		5AB37F781C1C673A00247E74 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = UIPopoverControllerTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/UIPopoverController.app/UIPopoverController";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		5AB37F4B1C1C673A00247E74 /* Build configuration list for PBXProject "UIPopoverController" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5AB37F711C1C673A00247E74 /* Debug */,
+				5AB37F721C1C673A00247E74 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		5AB37F731C1C673A00247E74 /* Build configuration list for PBXNativeTarget "UIPopoverController" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5AB37F741C1C673A00247E74 /* Debug */,
+				5AB37F751C1C673A00247E74 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		5AB37F761C1C673A00247E74 /* Build configuration list for PBXNativeTarget "UIPopoverControllerTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5AB37F771C1C673A00247E74 /* Debug */,
+				5AB37F781C1C673A00247E74 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 5AB37F481C1C673A00247E74 /* Project object */;
+}

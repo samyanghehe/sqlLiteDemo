@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6250" systemVersion="14A238x" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="c4c-c5-c8B">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6244"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <scenes>
+        <!--Navigation Controller-->
+        <scene sceneID="iam-yP-rlT">
+            <objects>
+                <navigationController id="c4c-c5-c8B" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="ADR-Om-NTY">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="Z8t-Wa-YdS"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="hSu-Py-EyO" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-870" y="460"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7Xr-NW-wdD">
+                                <rect key="frame" x="66" y="114" width="200" height="200"/>
+                                <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="200" id="48f-6M-pqC"/>
+                                    <constraint firstAttribute="height" constant="200" id="gEQ-bY-zKB"/>
+                                </constraints>
+                                <state key="normal" title="选择颜色">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="selectColor:" destination="BYZ-38-t0r" eventType="touchUpInside" id="oGg-1M-z57"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TVv-Ey-sfq">
+                                <rect key="frame" x="334" y="350" width="200" height="200"/>
+                                <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="200" id="6kr-LR-A9X"/>
+                                    <constraint firstAttribute="width" constant="200" id="7Px-yU-uT9"/>
+                                    <constraint firstAttribute="width" relation="lessThanOrEqual" constant="200" id="Lv5-0p-VR8"/>
+                                    <constraint firstAttribute="height" relation="lessThanOrEqual" constant="200" id="O4e-VC-Rgl"/>
+                                    <constraint firstAttribute="height" constant="200" id="QFA-8B-bbG"/>
+                                    <constraint firstAttribute="height" relation="lessThanOrEqual" constant="200" id="WG6-fU-53O"/>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="200" id="m1f-hH-G7P"/>
+                                    <constraint firstAttribute="width" relation="lessThanOrEqual" constant="200" id="r3F-ca-fKg"/>
+                                </constraints>
+                                <state key="normal" title="选择颜色">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="selectColor:" destination="BYZ-38-t0r" eventType="touchUpInside" id="X7t-c3-8cO"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="TVv-Ey-sfq" secondAttribute="bottom" constant="50" id="20h-mw-Q7s"/>
+                            <constraint firstItem="7Xr-NW-wdD" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="50" id="AAD-j4-zj3"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="TVv-Ey-sfq" secondAttribute="trailing" constant="50" id="HkL-5x-IUo"/>
+                            <constraint firstItem="7Xr-NW-wdD" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="50" id="Pvh-qp-OkL"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="E7n-N3-Sy5">
+                        <nil key="title"/>
+                        <barButtonItem key="leftBarButtonItem" title="菜单" id="Wx9-hF-6Mo">
+                            <connections>
+                                <action selector="menuClick:" destination="BYZ-38-t0r" id="6Zo-2C-mPX"/>
+                            </connections>
+                        </barButtonItem>
+                        <button key="titleView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="fe2-bt-jVA">
+                            <rect key="frame" x="180" y="7" width="240" height="30"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <state key="normal" title="标题按钮">
+                                <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                            </state>
+                            <connections>
+                                <action selector="titleClick:" destination="BYZ-38-t0r" eventType="touchUpInside" id="jji-ha-Uak"/>
+                            </connections>
+                        </button>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="colorButton" destination="7Xr-NW-wdD" id="bXH-Lw-LYy"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="338" y="476"/>
+        </scene>
+    </scenes>
+</document>
