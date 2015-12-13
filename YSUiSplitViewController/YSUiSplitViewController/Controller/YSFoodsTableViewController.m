@@ -44,18 +44,9 @@
 
 -(YSfoodsTableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    NSString *ID = @"food";
-    YSfoodsTableViewCell *cell = [self.tableView dequeueReusableCellWithIdentifier:ID];
-    if (cell == nil) {
-        cell = [[YSfoodsTableViewCell alloc]initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:ID];
-    }
+    YSfoodsTableViewCell *cell = [YSfoodsTableViewCell cellWithTableView:tableView];
     YSFoodModule *food = self.foods[indexPath.row];
-    NSURL *imageUrl = [NSURL URLWithString:food.imageUrl];
-    cell.imageView.image = [UIImage imageNamed:@"image_placeholder"];
-    
-    [cell.imageView setImageWithURL:imageUrl placeholderImage:[UIImage imageNamed:@"image_placeholder"]];
-    cell.textLabel.text = food.name;
-    cell.detailTextLabel.text = [NSString stringWithFormat:@"难度%@  耗时:%@",food.diff,food.time];
+    cell.food = food;
     return cell;
 }
 
@@ -69,7 +60,7 @@
 
 -(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    return 100;
+    return 90;
 }
 
 

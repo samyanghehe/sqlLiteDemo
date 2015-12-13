@@ -7,7 +7,11 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "YSFoodModule.h"
 
 @interface YSfoodsTableViewCell : UITableViewCell
+
+@property (nonatomic,strong)YSFoodModule *food;
++(instancetype)cellWithTableView:(UITableView *)tableView;
 
 @end
