@@ -1,0 +1,162 @@
+//
+//  YSLoginViewController.m
+//  QQZoneDemo
+//
+//  Created by ys on 15/12/14.
+//  Copyright (c) 2015年 ys. All rights reserved.
+//
+
+#import "YSLoginViewController.h"
+#import "UIImage+YS.h"
+#import "YSMainViewController.h"
+
+#define shakeValue 30
+
+@interface YSLoginViewController ()<UITextFieldDelegate>
+
+/**
+ *  整个登陆框
+ */
+@property (weak, nonatomic) IBOutlet UIView *LoginView;
+/**
+ *  帐号框
+ */
+@property (weak, nonatomic) IBOutlet UITextField *accountField;
+/**
+ *  密码框
+ */
+@property (weak, nonatomic) IBOutlet UITextField *pwdField;
+/**
+ *  登陆按钮
+ */
+@property (weak, nonatomic) IBOutlet UIButton *LoginButton;
+/**
+ *  联网指示器
+ */
+@property (weak, nonatomic) IBOutlet UIActivityIndicatorView *activity;
+/**
+ *  记住密码按钮
+ */
+@property (weak, nonatomic) IBOutlet UIButton *rememberPwdButton;
+/**
+ *  自动登陆按钮
+ */
+@property (weak, nonatomic) IBOutlet UIButton *autoLoginButton;
+/**
+ *  登陆按钮点击事件
+ */
+- (IBAction)LoginButtonClick;
+/**
+ *  记住密码或自动登陆按钮点击事件
+ */
+- (IBAction)rememberORautoClick:(UIButton *)sender;
+
+@end
+
+
+
+
+@implementation YSLoginViewController
+
+- (void)viewDidLoad {
+    [super viewDidLoad];
+    [self.LoginButton setBackgroundImage:[UIImage resizeImageWithName:@"login_button_normal"] forState:UIControlStateNormal];
+    [self.LoginButton setBackgroundImage:[UIImage resizeImageWithName:@"login_button_pressed"] forState:UIControlStateHighlighted];
+}
+
+
+
+/**
+ *  登陆按钮点击事件
+ */
+- (IBAction)LoginButtonClick {
+
+    [self.view endEditing:YES];
+    if (!self.accountField.text.length) {
+        [self showErr:@"请输入帐号"];
+        return;
+    }
+    if (!self.pwdField.text.length) {
+        [self showErr:@"请输入密码"];
+        return;
+    }
+    self.view.userInteractionEnabled = NO;
+    [self.activity startAnimating];
+    CGFloat time = 1.0;//模拟联网验证登陆
+    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(time * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+        [self.activity stopAnimating];
+        self.view.userInteractionEnabled = YES;
+        if (![self.accountField.text isEqualToString:@"123"]) {
+            [self showErr:@"帐号错误"];
+            return;
+        }
+        if (![self.pwdField.text isEqualToString:@"123"]) {
+            [self showErr:@"密码错误"];
+            return;
+        }
+    self.view.window.rootViewController = [[YSMainViewController alloc]init];
+    });
+
+    
+}
+
+/**
+ *  记住密码或自动登陆按钮点击事件
+ */
+- (IBAction)rememberORautoClick:(UIButton *)sender {
+    
+    if (sender == self.rememberPwdButton) {
+        if(sender.selected){
+            self.autoLoginButton.selected = NO;
+        }
+            
+    }else{
+        if (!sender.selected) {
+            self.rememberPwdButton.selected = YES;
+        }
+    }
+    sender.selected = !sender.selected;
+}
+/**
+ *  弹出错误框
+ *
+ *  @param errMsg 错误信息
+ */
+-(void)showErr:(NSString *)errMsg
+{
+    
+    UIAlertView *alert = [[UIAlertView alloc]initWithTitle:@"登陆失败" message:errMsg delegate:nil cancelButtonTitle:@"确定" otherButtonTitles:nil, nil];
+    [alert show];
+    
+    /**
+     *  整个登陆框抖动
+     */
+    CAKeyframeAnimation *shake = [CAKeyframeAnimation animation];
+    shake.keyPath = @"transform.translation.x";
+    shake.values = @[@0 , @shakeValue ,@-shakeValue, @0];
+    shake.repeatCount = 3;
+    shake.duration = 0.1;
+    
+    [self.LoginView.layer addAnimation:shake forKey:nil];
+}
+/**
+ *  触摸非输入view使键盘隐藏
+ */
+-(void)touchesEnded:(NSSet *)touches withEvent:(UIEvent *)event
+{
+    [self.view endEditing:YES];
+}
+
+/**
+ *  accountField,pwdField代理方法处理return key
+ */
+-(BOOL)textFieldShouldReturn:(UITextField *)textField
+{
+    if (textField == self.accountField) {
+        [self.pwdField becomeFirstResponder];
+    }else{
+        [self LoginButtonClick];
+    }
+    return YES;
+}
+@end
