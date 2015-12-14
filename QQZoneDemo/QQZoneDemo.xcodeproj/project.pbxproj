@@ -8,6 +8,11 @@
 
 /* Begin PBXBuildFile section */
 		5A0A6C0F1C1F1EAF00FCB226 /* YSMainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A0A6C0E1C1F1EAF00FCB226 /* YSMainViewController.m */; };
+		5A0A6C151C1F21EE00FCB226 /* YSDock.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A0A6C141C1F21EE00FCB226 /* YSDock.m */; };
+		5A0A6C191C1F28AB00FCB226 /* UIView+YS.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A0A6C181C1F28AB00FCB226 /* UIView+YS.m */; };
+		5A0A6C1D1C1F304A00FCB226 /* YSIconButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A0A6C1C1C1F304A00FCB226 /* YSIconButton.m */; };
+		5A0A6C201C1F307E00FCB226 /* YSTabbarView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A0A6C1F1C1F307E00FCB226 /* YSTabbarView.m */; };
+		5A0A6C231C1F309B00FCB226 /* YSButtomView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A0A6C221C1F309B00FCB226 /* YSButtomView.m */; };
 		5AEBAF381C1EFE9600C38F95 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AEBAF371C1EFE9600C38F95 /* main.m */; };
 		5AEBAF3B1C1EFE9600C38F95 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AEBAF3A1C1EFE9600C38F95 /* AppDelegate.m */; };
 		5AEBAF411C1EFE9600C38F95 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5AEBAF3F1C1EFE9600C38F95 /* Main.storyboard */; };
@@ -31,6 +36,17 @@
 /* Begin PBXFileReference section */
 		5A0A6C0D1C1F1EAF00FCB226 /* YSMainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YSMainViewController.h; sourceTree = "<group>"; };
 		5A0A6C0E1C1F1EAF00FCB226 /* YSMainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YSMainViewController.m; sourceTree = "<group>"; };
+		5A0A6C131C1F21EE00FCB226 /* YSDock.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YSDock.h; sourceTree = "<group>"; };
+		5A0A6C141C1F21EE00FCB226 /* YSDock.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YSDock.m; sourceTree = "<group>"; };
+		5A0A6C161C1F226E00FCB226 /* Define.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Define.h; sourceTree = "<group>"; };
+		5A0A6C171C1F28AB00FCB226 /* UIView+YS.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+YS.h"; sourceTree = "<group>"; };
+		5A0A6C181C1F28AB00FCB226 /* UIView+YS.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+YS.m"; sourceTree = "<group>"; };
+		5A0A6C1B1C1F304A00FCB226 /* YSIconButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YSIconButton.h; sourceTree = "<group>"; };
+		5A0A6C1C1C1F304A00FCB226 /* YSIconButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YSIconButton.m; sourceTree = "<group>"; };
+		5A0A6C1E1C1F307E00FCB226 /* YSTabbarView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YSTabbarView.h; sourceTree = "<group>"; };
+		5A0A6C1F1C1F307E00FCB226 /* YSTabbarView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YSTabbarView.m; sourceTree = "<group>"; };
+		5A0A6C211C1F309B00FCB226 /* YSButtomView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YSButtomView.h; sourceTree = "<group>"; };
+		5A0A6C221C1F309B00FCB226 /* YSButtomView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YSButtomView.m; sourceTree = "<group>"; };
 		5AEBAF321C1EFE9600C38F95 /* QQZoneDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = QQZoneDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5AEBAF361C1EFE9600C38F95 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5AEBAF371C1EFE9600C38F95 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -66,6 +82,48 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		5A0A6C101C1F21A500FCB226 /* Moudle */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Moudle;
+			sourceTree = "<group>";
+		};
+		5A0A6C111C1F21AD00FCB226 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				5A0A6C131C1F21EE00FCB226 /* YSDock.h */,
+				5A0A6C141C1F21EE00FCB226 /* YSDock.m */,
+				5A0A6C1B1C1F304A00FCB226 /* YSIconButton.h */,
+				5A0A6C1C1C1F304A00FCB226 /* YSIconButton.m */,
+				5A0A6C1E1C1F307E00FCB226 /* YSTabbarView.h */,
+				5A0A6C1F1C1F307E00FCB226 /* YSTabbarView.m */,
+				5A0A6C211C1F309B00FCB226 /* YSButtomView.h */,
+				5A0A6C221C1F309B00FCB226 /* YSButtomView.m */,
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		5A0A6C121C1F21B200FCB226 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				5A0A6C0D1C1F1EAF00FCB226 /* YSMainViewController.h */,
+				5A0A6C0E1C1F1EAF00FCB226 /* YSMainViewController.m */,
+			);
+			name = Controller;
+			sourceTree = "<group>";
+		};
+		5A0A6C1A1C1F28B600FCB226 /* Category */ = {
+			isa = PBXGroup;
+			children = (
+				5AEBAF651C1F0C3A00C38F95 /* UIImage+YS.h */,
+				5AEBAF661C1F0C3A00C38F95 /* UIImage+YS.m */,
+				5A0A6C171C1F28AB00FCB226 /* UIView+YS.h */,
+				5A0A6C181C1F28AB00FCB226 /* UIView+YS.m */,
+			);
+			name = Category;
+			sourceTree = "<group>";
+		};
 		5AEBAF291C1EFE9600C38F95 = {
 			isa = PBXGroup;
 			children = (
@@ -102,6 +160,7 @@
 				5AEBAF421C1EFE9600C38F95 /* Images.xcassets */,
 				5AEBAF361C1EFE9600C38F95 /* Info.plist */,
 				5AEBAF371C1EFE9600C38F95 /* main.m */,
+				5A0A6C161C1F226E00FCB226 /* Define.h */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -126,9 +185,9 @@
 		5AEBAF5B1C1EFEA400C38F95 /* Main */ = {
 			isa = PBXGroup;
 			children = (
-				5AEBAF3F1C1EFE9600C38F95 /* Main.storyboard */,
-				5A0A6C0D1C1F1EAF00FCB226 /* YSMainViewController.h */,
-				5A0A6C0E1C1F1EAF00FCB226 /* YSMainViewController.m */,
+				5A0A6C121C1F21B200FCB226 /* Controller */,
+				5A0A6C111C1F21AD00FCB226 /* View */,
+				5A0A6C101C1F21A500FCB226 /* Moudle */,
 			);
 			name = Main;
 			sourceTree = "<group>";
@@ -136,6 +195,7 @@
 		5AEBAF5C1C1EFEAA00C38F95 /* Login */ = {
 			isa = PBXGroup;
 			children = (
+				5AEBAF3F1C1EFE9600C38F95 /* Main.storyboard */,
 				5AEBAF5E1C1EFFBC00C38F95 /* YSLoginViewController.h */,
 				5AEBAF5F1C1EFFBC00C38F95 /* YSLoginViewController.m */,
 			);
@@ -145,6 +205,7 @@
 		5AEBAF5D1C1EFEB400C38F95 /* Other */ = {
 			isa = PBXGroup;
 			children = (
+				5A0A6C1A1C1F28B600FCB226 /* Category */,
 				5AEBAF611C1F0B9400C38F95 /* Lib */,
 				5AEBAF3A1C1EFE9600C38F95 /* AppDelegate.m */,
 				5AEBAF391C1EFE9600C38F95 /* AppDelegate.h */,
@@ -155,8 +216,6 @@
 		5AEBAF611C1F0B9400C38F95 /* Lib */ = {
 			isa = PBXGroup;
 			children = (
-				5AEBAF651C1F0C3A00C38F95 /* UIImage+YS.h */,
-				5AEBAF661C1F0C3A00C38F95 /* UIImage+YS.m */,
 			);
 			name = Lib;
 			sourceTree = "<group>";
@@ -262,10 +321,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5A0A6C151C1F21EE00FCB226 /* YSDock.m in Sources */,
 				5AEBAF3B1C1EFE9600C38F95 /* AppDelegate.m in Sources */,
+				5A0A6C1D1C1F304A00FCB226 /* YSIconButton.m in Sources */,
+				5A0A6C201C1F307E00FCB226 /* YSTabbarView.m in Sources */,
 				5AEBAF381C1EFE9600C38F95 /* main.m in Sources */,
+				5A0A6C231C1F309B00FCB226 /* YSButtomView.m in Sources */,
 				5AEBAF601C1EFFBC00C38F95 /* YSLoginViewController.m in Sources */,
 				5AEBAF671C1F0C3A00C38F95 /* UIImage+YS.m in Sources */,
+				5A0A6C191C1F28AB00FCB226 /* UIView+YS.m in Sources */,
 				5A0A6C0F1C1F1EAF00FCB226 /* YSMainViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

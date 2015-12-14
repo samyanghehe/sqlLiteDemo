@@ -7,10 +7,8 @@
 //
 
 #import "YSLoginViewController.h"
-#import "UIImage+YS.h"
 #import "YSMainViewController.h"
-
-#define shakeValue 30
+#import "Define.h"
 
 @interface YSLoginViewController ()<UITextFieldDelegate>
 
@@ -62,6 +60,7 @@
     [super viewDidLoad];
     [self.LoginButton setBackgroundImage:[UIImage resizeImageWithName:@"login_button_normal"] forState:UIControlStateNormal];
     [self.LoginButton setBackgroundImage:[UIImage resizeImageWithName:@"login_button_pressed"] forState:UIControlStateHighlighted];
+    self.view.backgroundColor = YSBackgroundColor;
 }
 
 
