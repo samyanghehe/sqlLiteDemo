@@ -23,13 +23,13 @@
     return image;
 }
 
-+(UIImage *)resizeImageWithName:(NSString *)name
++(UIImage *)resizedImageWithName:(NSString *)name
 {
     
-    return [self resizeImageWithName:name left:0.5 top:0.5];
+    return [self resizedImageWithName:name left:0.5 top:0.5];
 }
 
-+(UIImage *)resizeImageWithName:(NSString *)name left:(CGFloat)left top:(CGFloat)top
++(UIImage *)resizedImageWithName:(NSString *)name left:(CGFloat)left top:(CGFloat)top
 {
     UIImage *image = [UIImage imageWithName:name];
     

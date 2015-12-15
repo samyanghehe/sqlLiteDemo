@@ -25,3 +25,7 @@
 #define YSBottomMenuButtonPortraitW 70.0
 #define YSBottomMenuButtonLanscapeW 90.0
 #define YSBottomMenuButtonH 70.0
+
+#define YSTabBarButtonImageLanscpaeWRatio 0.4
+
+#define randomColor [UIColor colorWithRed:arc4random()%255/255.0 green:arc4random()%255/255.0 blue:arc4random()%255/255.0 alpha:arc4random()%255/255.0];

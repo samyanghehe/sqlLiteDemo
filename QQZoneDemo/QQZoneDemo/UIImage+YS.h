@@ -9,6 +9,6 @@
 
 @interface UIImage (YS)
 +(UIImage *)imageWithName:(NSString *)name;
-+(UIImage *)resizeImageWithName:(NSString *)name;
-+(UIImage *)resizeImageWithName:(NSString *)name left:(CGFloat)left top:(CGFloat)top;
++(UIImage *)resizedImageWithName:(NSString *)name;
++(UIImage *)resizedImageWithName:(NSString *)name left:(CGFloat)left top:(CGFloat)top;
 @end

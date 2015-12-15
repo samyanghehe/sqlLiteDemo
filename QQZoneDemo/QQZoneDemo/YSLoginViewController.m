@@ -58,8 +58,8 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    [self.LoginButton setBackgroundImage:[UIImage resizeImageWithName:@"login_button_normal"] forState:UIControlStateNormal];
-    [self.LoginButton setBackgroundImage:[UIImage resizeImageWithName:@"login_button_pressed"] forState:UIControlStateHighlighted];
+    [self.LoginButton setBackgroundImage:[UIImage resizedImageWithName:@"login_button_normal"] forState:UIControlStateNormal];
+    [self.LoginButton setBackgroundImage:[UIImage resizedImageWithName:@"login_button_pressed"] forState:UIControlStateHighlighted];
     self.view.backgroundColor = YSBackgroundColor;
 }
 
@@ -81,7 +81,7 @@
     }
     self.view.userInteractionEnabled = NO;
     [self.activity startAnimating];
-    CGFloat time = 1.0;//模拟联网验证登陆
+    CGFloat time = 0.5;//模拟联网验证登陆
     dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(time * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
         [self.activity stopAnimating];
         self.view.userInteractionEnabled = YES;

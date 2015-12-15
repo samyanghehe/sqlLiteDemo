@@ -7,9 +7,18 @@
 //
 
 #import <UIKit/UIKit.h>
+@class YSTabbarView;
+@class YSIconButton;
+@class YSBottomView;
 
 @interface YSDock : UIView
 
+@property (nonatomic,weak,readonly)YSTabbarView *tabbarView;
+
+@property (nonatomic,weak,readonly) YSIconButton *iconButton;
+
+
+@property (nonatomic,weak,readonly) YSBottomView *bottomView;
 /**
  *  旋转
  *

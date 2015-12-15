@@ -9,13 +9,12 @@
 #import "YSDock.h"
 #import "YSIconButton.h"
 #import "YSTabbarView.h"
-#import "YSButtomView.h"
+#import "YSBottomView.h"
 #import "Define.h"
 
 @interface YSDock()
-@property (nonatomic,weak) YSIconButton *iconButton;
-@property (nonatomic,weak) YSTabbarView *tabbarView;
-@property (nonatomic,weak) YSButtomView *buttomView;
+
+
 @end
 
 @implementation YSDock
@@ -40,30 +39,26 @@
 -(void)setupIconButton
 {
     YSIconButton *iconButton = [[YSIconButton alloc]init];
-    self.iconButton = iconButton;
+    _iconButton = iconButton;
     [self addSubview:iconButton];
-    
-    iconButton.backgroundColor = [UIColor greenColor];
 }
 // 2.选项卡
 -(void)setupTabBarView
 {
     YSTabbarView *tabbarView = [[YSTabbarView alloc]init];
-    self.tabbarView = tabbarView;
+    _tabbarView = tabbarView;
     [self addSubview:tabbarView];
     //使tabbarView动态调整与父控件顶部的距离，即底部粘连
     tabbarView.autoresizingMask = UIViewAutoresizingFlexibleTopMargin;
-    tabbarView.backgroundColor = [UIColor redColor];
 }
 // 3.底部菜单
 -(void)setupBottomMenu
 {
-    YSButtomView *buttomView = [[YSButtomView alloc]init];
-    self.buttomView = buttomView;
-    [self addSubview:buttomView];
-    //使buttomView动态调整与父控件顶部的距离，即底部粘连
-    buttomView.autoresizingMask = UIViewAutoresizingFlexibleTopMargin;
-    buttomView.backgroundColor = [UIColor yellowColor];
+    YSBottomView *bottomView = [[YSBottomView alloc]init];
+    _bottomView = bottomView;
+    [self addSubview:bottomView];
+    //使bottomView动态调整与父控件顶部的距离，即底部粘连
+    bottomView.autoresizingMask = UIViewAutoresizingFlexibleTopMargin;
 }
 
 /**
@@ -74,19 +69,19 @@
 - (void)rotate:(BOOL)lanscape
 {
     // 1.调整底部菜单
-    [self.buttomView rotate:lanscape];
+    [self.bottomView rotate:lanscape];
     
     // 2.根据底部菜单宽度调整dock宽度
-    self.width = self.buttomView.width;
+    self.width = self.bottomView.width;
     
     // 3.调整tabbarView
     [self.tabbarView rotate:lanscape];
     
     // 4.根据底部view和自身高度调整tabbarView.y
-    self.tabbarView.y = self.buttomView.y - self.tabbarView.height;
+    self.tabbarView.y = self.bottomView.y - self.tabbarView.height;
     
     // 5.调整头像
-    [self.iconButton rotate:lanscape];
+    [_iconButton rotate:lanscape];
 
 }
 @end
