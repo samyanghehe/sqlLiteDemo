@@ -41,6 +41,10 @@
  */
 @property (weak, nonatomic) IBOutlet UIButton *autoLoginButton;
 /**
+ *  preference数据存储，在沙盒/library/Preferences
+ */
+@property (nonatomic,strong) NSUserDefaults *userdefault;
+/**
  *  登陆按钮点击事件
  */
 - (IBAction)LoginButtonClick;
@@ -56,12 +60,45 @@
 
 @implementation YSLoginViewController
 
+-(NSUserDefaults *)userdefault
+{
+    if (_userdefault == nil) {
+        _userdefault  = [NSUserDefaults standardUserDefaults];
+    }
+    return _userdefault;
+}
+
 - (void)viewDidLoad {
     [super viewDidLoad];
+    [self setupView];
+    [self loadPreferences];
+}
+
+-(void)setupView
+{
     [self.LoginButton setBackgroundImage:[UIImage resizedImageWithName:@"login_button_normal"] forState:UIControlStateNormal];
     [self.LoginButton setBackgroundImage:[UIImage resizedImageWithName:@"login_button_pressed"] forState:UIControlStateHighlighted];
     self.view.backgroundColor = YSBackgroundColor;
 }
+
+-(void)loadPreferences
+{
+    NSString *account = [self.userdefault objectForKey:@"account"];
+    NSString *password = [self.userdefault objectForKey:@"password"];
+    BOOL rememberPassword = [self.userdefault boolForKey:@"rememberPassword"];
+    BOOL autoLogin = [self.userdefault boolForKey:@"autoLogin"];
+    self.accountField.text = account;
+    if (rememberPassword) {
+        self.pwdField.text = password;
+        
+    }
+    if (autoLogin) {
+        [self LoginButtonClick];
+    }
+    self.rememberPwdButton.selected = rememberPassword;
+    self.autoLoginButton.selected = autoLogin;
+}
+
 
 
 
@@ -93,28 +130,48 @@
             [self showErr:@"密码错误"];
             return;
         }
-    self.view.window.rootViewController = [[YSMainViewController alloc]init];
+        //检查是否保存用户密码
+        [self checkSave];
+        //切换控制器
+        self.view.window.rootViewController = [[YSMainViewController alloc]init];
     });
 
     
 }
 
+
+-(void)checkSave
+{
+    //这里不进行数据加密，仅作为测试保存帐户到属性列表
+    [self.userdefault setObject:self.accountField.text forKey:@"account"];
+    [self.userdefault setBool:[self.rememberPwdButton isSelected] forKey:@"rememberPassword"];
+    [self.userdefault setBool:[self.autoLoginButton isSelected] forKey:@"autoLogin"];
+    NSString *path = [NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES)firstObject];
+    NSLog(@"%@",path);
+    if ([self.rememberPwdButton isSelected]) {
+        //保存密码
+        [self.userdefault setObject:self.pwdField.text forKey:@"password"];
+    }
+    //同步数据到沙盒/library/preferences
+    [self.userdefault synchronize];
+}
 /**
  *  记住密码或自动登陆按钮点击事件
  */
 - (IBAction)rememberORautoClick:(UIButton *)sender {
     
-    if (sender == self.rememberPwdButton) {
-        if(sender.selected){
+    if (sender == self.rememberPwdButton) {//点击的是记住密码按钮
+        if(sender.selected){//原记住密码按钮是选中状态
             self.autoLoginButton.selected = NO;
         }
             
-    }else{
-        if (!sender.selected) {
+    }else{//点击的是自动登陆按钮
+        if (!sender.selected) {//原自动登陆按钮是选中状态
             self.rememberPwdButton.selected = YES;
         }
     }
     sender.selected = !sender.selected;
+    
 }
 /**
  *  弹出错误框

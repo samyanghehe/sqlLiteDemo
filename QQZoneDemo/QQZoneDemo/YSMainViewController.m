@@ -35,6 +35,7 @@
 
 -(void)setupContentView
 {
+    //添加
     UIView *contentView = [[UIView alloc]init];
     contentView.y = 0;
     contentView.x = self.dockView.width;
@@ -43,6 +44,22 @@
     self.contentView = contentView;
     self.contentView.autoresizingMask = UIViewAutoresizingFlexibleHeight;
     [self.view addSubview:contentView];
+    //添加手势识别做弹簧效果
+    UIPanGestureRecognizer *pan = [[UIPanGestureRecognizer alloc]initWithTarget:self action:@selector(pullContentView:)];
+    [contentView addGestureRecognizer:pan];
+}
+
+-(void)pullContentView:(UIPanGestureRecognizer *)pan
+{
+     if(pan.state == UIGestureRecognizerStateEnded || pan.state == UIGestureRecognizerStateCancelled){
+         [UIView animateWithDuration:0.3 animations:^{
+             //清空transform
+             self.contentView.transform = CGAffineTransformIdentity;
+         }];
+     }else{
+         CGPoint translation = [pan translationInView:pan.view];
+         pan.view.transform = CGAffineTransformMakeTranslation(translation.x * 0.3, 0);//系数越小，弹簧效果越强烈
+     }
 }
 
 -(void)setupChildViewControllers
@@ -87,8 +104,23 @@
     UIViewController *vc0 = [[UIViewController alloc]init];
     UINavigationController *nav0 = [[UINavigationController alloc]initWithRootViewController:vc0];
     nav0.navigationBar.barTintColor = [UIColor grayColor];
+    vc0.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc]initWithTitle:@"logOut" style:UIBarButtonItemStyleDone target:self action:@selector(logOut)];
+    vc0.navigationItem.leftBarButtonItem.tintColor = [UIColor whiteColor];
     vc0.view.backgroundColor = randomColor;
     [self addChildViewController:nav0];
+}
+-(void)logOut
+{
+    NSUserDefaults *userdefault = [NSUserDefaults standardUserDefaults];
+    [userdefault setBool:NO forKey:@"autoLogin"];
+    [userdefault synchronize];
+    UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
+    
+    [UIView animateWithDuration:0.5 animations:^{
+        self.view.window.rootViewController = [storyboard instantiateInitialViewController];
+//        //这样也可以
+//        self.view.window.rootViewController = [storyboard instantiateViewControllerWithIdentifier:@"login"];
+    }];
 }
 
 -(void)setupDock
