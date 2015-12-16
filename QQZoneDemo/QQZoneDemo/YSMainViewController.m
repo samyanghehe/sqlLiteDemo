@@ -33,6 +33,7 @@
     [self willRotateToInterfaceOrientation:self.interfaceOrientation duration:0.0];
 }
 
+#pragma mark -设置容器view
 -(void)setupContentView
 {
     //添加
@@ -49,6 +50,7 @@
     [contentView addGestureRecognizer:pan];
 }
 
+#pragma mark -弹簧效果
 -(void)pullContentView:(UIPanGestureRecognizer *)pan
 {
      if(pan.state == UIGestureRecognizerStateEnded || pan.state == UIGestureRecognizerStateCancelled){
@@ -62,6 +64,7 @@
      }
 }
 
+#pragma mark -设置子控制器
 -(void)setupChildViewControllers
 {
     //仅实现了第一个
@@ -109,6 +112,8 @@
     vc0.view.backgroundColor = randomColor;
     [self addChildViewController:nav0];
 }
+
+#pragma mark -登出
 -(void)logOut
 {
     NSUserDefaults *userdefault = [NSUserDefaults standardUserDefaults];
@@ -123,6 +128,7 @@
     }];
 }
 
+#pragma mark -设置dock栏
 -(void)setupDock
 {
     YSDock *dockView = [[YSDock alloc]init];
@@ -140,6 +146,7 @@
     [self.dockView.iconButton addTarget:self action:@selector(iconButtonClick:) forControlEvents:UIControlEventTouchDown];
 }
 
+#pragma mark -iconButton点击处理
 -(void)iconButtonClick:(YSIconButton *)iconButton
 {
     [self tabbarView:nil didSelectedFrom:0 to:6];
@@ -152,7 +159,7 @@
  *  @param toInterfaceOrientation 旋转方向
  *  @param duration               旋转耗时
  */
-
+#pragma mark -屏幕即将旋转时设置各个veiw的frame
 -(void)willRotateToInterfaceOrientation:(UIInterfaceOrientation)toInterfaceOrientation duration:(NSTimeInterval)duration
 {
     [UIView animateWithDuration:0.5 animations:^{
@@ -163,7 +170,7 @@
     }];
 }
 
-
+#pragma mark -tabbarView点击事件处理
 -(void)tabbarView:(YSTabbarView *)tabbarView didSelectedFrom:(int)from to:(int)to
 {
     //新控制器
@@ -188,6 +195,7 @@
     }
 }
 
+#pragma mark -dock栏底部按钮点击事件处理
 -(void)bottomView:(YSBottomView *)bottomView didSelectedWithType:(YSBottomViewButtonType)YSBottomViewButtonType
 {
     switch (YSBottomViewButtonType) {

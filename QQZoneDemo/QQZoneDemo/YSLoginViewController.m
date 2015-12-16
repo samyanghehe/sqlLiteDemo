@@ -56,8 +56,6 @@
 @end
 
 
-
-
 @implementation YSLoginViewController
 
 -(NSUserDefaults *)userdefault
@@ -73,24 +71,27 @@
     [self setupView];
     [self loadPreferences];
 }
-
+#pragma mark -设置view背景
 -(void)setupView
 {
     [self.LoginButton setBackgroundImage:[UIImage resizedImageWithName:@"login_button_normal"] forState:UIControlStateNormal];
     [self.LoginButton setBackgroundImage:[UIImage resizedImageWithName:@"login_button_pressed"] forState:UIControlStateHighlighted];
     self.view.backgroundColor = YSBackgroundColor;
 }
-
+#pragma mark -读取程序配置
 -(void)loadPreferences
 {
     NSString *account = [self.userdefault objectForKey:@"account"];
     NSString *password = [self.userdefault objectForKey:@"password"];
     BOOL rememberPassword = [self.userdefault boolForKey:@"rememberPassword"];
     BOOL autoLogin = [self.userdefault boolForKey:@"autoLogin"];
-    self.accountField.text = account;
+    if(account){
+        self.accountField.text = account;
+    }
     if (rememberPassword) {
         self.pwdField.text = password;
-        
+    }else{
+        self.pwdField.text = nil;
     }
     if (autoLogin) {
         [self LoginButtonClick];
@@ -101,10 +102,7 @@
 
 
 
-
-/**
- *  登陆按钮点击事件
- */
+#pragma mark -登陆按钮点击事件
 - (IBAction)LoginButtonClick {
 
     [self.view endEditing:YES];
@@ -139,7 +137,7 @@
     
 }
 
-
+#pragma mark -检查是否保存用户密码
 -(void)checkSave
 {
     //这里不进行数据加密，仅作为测试保存帐户到属性列表
@@ -155,9 +153,9 @@
     //同步数据到沙盒/library/preferences
     [self.userdefault synchronize];
 }
-/**
- *  记住密码或自动登陆按钮点击事件
- */
+
+
+#pragma mark -记住密码或自动登陆按钮点击事件
 - (IBAction)rememberORautoClick:(UIButton *)sender {
     
     if (sender == self.rememberPwdButton) {//点击的是记住密码按钮
@@ -173,11 +171,9 @@
     sender.selected = !sender.selected;
     
 }
-/**
- *  弹出错误框
- *
- *  @param errMsg 错误信息
- */
+
+
+#pragma mark -弹出错误框
 -(void)showErr:(NSString *)errMsg
 {
     
@@ -195,17 +191,15 @@
     
     [self.LoginView.layer addAnimation:shake forKey:nil];
 }
-/**
- *  触摸非输入view使键盘隐藏
- */
+
+#pragma mark -触摸非输入view使键盘隐藏
 -(void)touchesEnded:(NSSet *)touches withEvent:(UIEvent *)event
 {
     [self.view endEditing:YES];
 }
 
-/**
- *  accountField,pwdField代理方法处理return key
- */
+
+#pragma mark -accountField,pwdField代理方法处理return key
 -(BOOL)textFieldShouldReturn:(UITextField *)textField
 {
     if (textField == self.accountField) {

@@ -36,7 +36,7 @@
     self.selectedButton.selected = NO;
 }
 
-
+#pragma mark -新建按钮
 - (void)setupButtonWithIcon:(NSString *)icon title:(NSString *)title
 {
     YSTabbarButton *button = [[YSTabbarButton alloc] init];
@@ -51,6 +51,7 @@
 /**
  *  监听按钮点击
  */
+#pragma mark -监听按钮点击
 - (void)buttonClick:(YSTabbarButton *)button
 {
     if([self.deletage respondsToSelector:@selector(tabbarView:didSelectedFrom:to:)]){
@@ -67,6 +68,8 @@
  *
  *  @param lanscape 是否为横屏
  */
+#pragma mark -旋转
+
 - (void)rotate:(BOOL)lanscape
 {
     int count = (int)self.subviews.count;
